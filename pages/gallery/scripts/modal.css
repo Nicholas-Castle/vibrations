@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+
+.modal-button{
+	background-color: aqua;
+	padding: 1em 2em;
+	color: aliceblue;
+	border: 0;
+}
+.modal-button:hover{
+	background: #333;
+}
+
+.popupBoxWrapper{
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	background: rgba(0,0,0,0.62);
+	z-index: 10;
+}
+@keyframes modalOpen{
+	from{opacity: 0}
+	to {opacity: 1}
+}
+.popupBoxContent{
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-size: 80%;
+	background-color: #f4f4f4;
+	margin: 5rem auto;
+	padding: 20px;
+	width: 70%;
+	max-width: 1200px;
+	box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0px 7px 20px 0px rgb(0,0,0,0.17);
+	border-radius: 30px;
+	animation: modalOpen;
+	animation-duration: 1s;
+}
+
+.popupBoxContent img {
+	width: 100%;
+}
+h3, h4 {
+	margin: 0;
+	text-transform: uppercase;
+}
+h3 {
+	margin-top: 1rem;
+	font-size: 2em;
+}
+h4 {
+	font-size: 1.5em;
+	font-weight: 400;
+}
+
+.closeBtn{
+	color: #CCCCCC;
+	float: right;
+	font-size: 30px;
+	margin-bottom: 1rem;
+}
+
+.closeBtn:hover,.closeBtn:focus{
+	color: #000000;
+	text-decoration: none;
+	cursor: pointer;
+}
